@@ -1,0 +1,32 @@
+
+
+PATH=:/data/genomicsocorg/Shared/Programs/GeneMark-ES/gm_et_linux_64/gmes_petap/:/data/genomicsocorg/js806/software/Augustus/config:/data/genomicsocorg/Shared/Programs/Augustus/Augustus/scripts/:/data/genomicsocorg/Shared/Programs/Augustus/Augustus/bin/:/cm/shared/apps/bamtools/2.4.1/bin/:/cm/shared/apps/samtools/1.3.2/bin/:/cm/shared/apps/bcftools/1.9/bin/:/cm/shared/apps/htslib/1.9/:/data/genomicsocorg/Shared/Programs/Braker2/BRAKER/scripts/:$PATH
+
+export PATH
+
+module load bamtools/2.4.1
+module load samtools/1.3.2
+module load bcftools/1.9
+module load htslib/1.9
+module load blast+/2.5.0
+module load python/gcc/3.5.2
+
+source /data/genomicsocorg/js806/software/Anaconda/etc/profile.d/conda.sh
+conda activate NewBraker
+
+export PERL5LIB=/data/genomicsocorg/js806/software/Anaconda/envs/NewBraker/lib/site_perl/5.26.2:$PERL5LIB
+export AUGUSTUS_CONFIG_PATH=/data/genomicsocorg/js806/software/Augustus/config
+
+alias perl="/data/genomicsocorg/js806/software/Anaconda/envs/NewBraker/bin/perl5.26.2"
+
+/data/genomicsocorg/js806/software/Anaconda/envs/NewBraker/bin/perl5.26.2 \
+-I /data/genomicsocorg/js806/software/Anaconda/envs/NewBraker/lib/site_perl/5.26.2/ \
+/data/genomicsocorg/Shared/Programs/Braker2/BRAKER/scripts/braker.pl \
+--species=Leptothorax_acervorum_FM --genome=../../Data.dir/Genome.dir/FM_genome.dir/clear_OT18_12_MP4_re-do_S2_assembly_3b.fasta.softmasked2 \
+--bam=../../STAR_alignment.dir/STAR_align_FM.dir/STAR_FM_Aligned.sortedByCoord.out.bam \
+--gff3 --UTR=on --softmasking 1 --verbosity=3 --cores 16 \
+--AUGUSTUS_SCRIPTS_PATH=/data/genomicsocorg/Shared/Programs/Augustus/Augustus/scripts \
+--AUGUSTUS_BIN_PATH=/data/genomicsocorg/Shared/Programs/Augustus/Augustus/bin \
+--AUGUSTUS_CONFIG_PATH=/data/genomicsocorg/js806/software/Augustus/config \
+--GENEMARK_PATH=/data/genomicsocorg/Shared/Programs/GeneMark-ES/gm_et_linux_64/gmes_petap
+

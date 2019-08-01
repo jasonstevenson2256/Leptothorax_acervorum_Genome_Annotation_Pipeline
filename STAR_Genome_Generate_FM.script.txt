@@ -1,0 +1,5 @@
+
+
+STAR --runThreadN 1 --limitGenomeGenerateRAM 110000000000 --runMode genomeGenerate \
+--genomeDir ./STAR_FM_Genome.dir \
+--genomeFastaFiles ../Data.dir/Genome.dir/FM_genome.dir/clear_OT18_12_MP4_re-do_S2_assembly_3b.fasta.hardmasked2

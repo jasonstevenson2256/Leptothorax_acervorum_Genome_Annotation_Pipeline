@@ -1,0 +1,4 @@
+
+
+/data/genomicsocorg/Shared/Programs/SCRMshaw/Extras/Generate_top_N_SCRMhits.pl \
+-d Results/ -o Top_SCRM_hits_FM
