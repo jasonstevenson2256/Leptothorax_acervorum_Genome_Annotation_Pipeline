@@ -1,5 +1,0 @@
-
-
-Trinity --genome_guided_bam ../../STAR_alignment.dir/STAR_align_FM.dir/STAR_FM_Aligned.sortedByCoord.out.bam \
---max_memory 300G --genome_guided_max_intron 10000 --CPU 8 \
---output Trinity_FM_out.dir
