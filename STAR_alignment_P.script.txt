@@ -1,6 +1,0 @@
-
-
-STAR --genomeDir ../../STAR_genome_construction.dir/STAR_P_Genome.dir \
---readFilesCommand zcat --readFilesIn ../../Data.dir/RNAseq_data.dir/NG-19842_SA18R_lib333933_6410_2_1_val_1.fq.gz ../../Data.dir/RNAseq_data.dir/NG-19842_SA18R_lib333933_6410_2_2_val_2.fq.gz \
---outFileNamePrefix STAR_P_ --outSAMtype BAM SortedByCoordinate
-
