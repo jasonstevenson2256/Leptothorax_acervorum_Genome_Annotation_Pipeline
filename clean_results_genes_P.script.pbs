@@ -1,0 +1,6 @@
+
+
+/data/genomicsocorg/Shared/Programs/Augustus/Augustus/scripts/getAnnoFastaFromJoingenes.py \
+-g ../../../../Data.dir/Genome.dir/P_genome.dir/clear_PF_15_M1_S3.fasta.softmasked2 \
+-s augustus.hints.gtf -f augustus.hints.gtf -o augustus.hints.P_out
+

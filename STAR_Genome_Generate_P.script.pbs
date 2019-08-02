@@ -1,0 +1,5 @@
+
+
+STAR --runThreadN 1 --limitGenomeGenerateRAM 110000000000 --runMode genomeGenerate \
+--genomeDir ./STAR_P_Genome.dir \
+--genomeFastaFiles ../Data.dir/Genome.dir/P_genome.dir/clear_PF_15_M1_S3.fasta.hardmasked2
